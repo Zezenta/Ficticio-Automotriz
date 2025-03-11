@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficiticio Automotriz - Accesorios para Carros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <h1 class="header__title">Ficiticio Automotriz</h1>
+            </div>
+            <div class="header__menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
+                    <li class="header__nav-item"><a href="#nosotros" class="header__nav-link">Sobre Nosotros</a></li>
+                    <li class="header__nav-item"><a href="#catalogo" class="header__nav-link">Catálogo</a></li>
+                    <li class="header__nav-item"><a href="#productos" class="header__nav-link">Productos</a></li>
+                    <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero__container">
+            <h2 class="hero__title">Mejora tu Vehículo con Nuestros Accesorios Premium</h2>
+            <p class="hero__subtitle">Calidad, estilo y rendimiento para tu auto</p>
+            <a href="#catalogo" class="hero__button">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features__container">
+            <div class="features__item">
+                <i class="features__icon fas fa-truck"></i>
+                <h3 class="features__title">Envío Gratis</h3>
+                <p class="features__text">En compras mayores a $50</p>
+            </div>
+            <div class="features__item">
+                <i class="features__icon fas fa-shield-alt"></i>
+                <h3 class="features__title">Garantía</h3>
+                <p class="features__text">12 meses en todos los productos</p>
+            </div>
+            <div class="features__item">
+                <i class="features__icon fas fa-headset"></i>
+                <h3 class="features__title">Soporte 24/7</h3>
+                <p class="features__text">Atención personalizada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="nosotros">
+        <div class="about__container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about__content">
+                <div class="about__image">
+                    <img src="https://via.placeholder.com/500x300" alt="Equipo Ficiticio Automotriz">
+                </div>
+                <div class="about__text">
+                    <h3 class="about__subtitle">Expertos en Accesorios Automotrices</h3>
+                    <p class="about__description">En Ficiticio Automotriz nos dedicamos a ofrecer los mejores accesorios para tu vehículo desde 2010. Contamos con un equipo de expertos apasionados por el mundo automotriz que seleccionan cuidadosamente cada producto para garantizar la mejor calidad y rendimiento.</p>
+                    <p class="about__description">Nuestro compromiso es brindar soluciones innovadoras que mejoren la estética y funcionalidad de tu vehículo, siempre con el mejor servicio y asesoramiento personalizado.</p>
+                    <a href="#contacto" class="about__button">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="catalogo">
+        <div class="categories__container">
+            <h2 class="section-title">Nuestro Catálogo</h2>
+            <div class="categories__grid">
+                <div class="categories__item">
+                    <div class="categories__image">
+                        <img src="https://via.placeholder.com/300x200" alt="Exterior">
+                    </div>
+                    <h3 class="categories__title">Exterior</h3>
+                    <a href="#" class="categories__link">Ver Productos</a>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__image">
+                        <img src="https://via.placeholder.com/300x200" alt="Interior">
+                    </div>
+                    <h3 class="categories__title">Interior</h3>
+                    <a href="#" class="categories__link">Ver Productos</a>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__image">
+                        <img src="https://via.placeholder.com/300x200" alt="Electrónica">
+                    </div>
+                    <h3 class="categories__title">Electrónica</h3>
+                    <a href="#" class="categories__link">Ver Productos</a>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__image">
+                        <img src="https://via.placeholder.com/300x200" alt="Rendimiento">
+                    </div>
+                    <h3 class="categories__title">Rendimiento</h3>
+                    <a href="#" class="categories__link">Ver Productos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="products__container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products__filter">
+                <button class="products__filter-btn products__filter-btn--active" data-filter="all">Todos</button>
+                <button class="products__filter-btn" data-filter="exterior">Exterior</button>
+                <button class="products__filter-btn" data-filter="interior">Interior</button>
+                <button class="products__filter-btn" data-filter="electronica">Electrónica</button>
+            </div>
+            <div class="products__grid">
+                <div class="products__item" data-category="exterior">
+                    <div class="products__image">
+                        <img src="https://via.placeholder.com/300x300" alt="Spoiler Deportivo">
+                        <div class="products__overlay">
+                            <button class="products__quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <h3 class="products__title">Spoiler Deportivo</h3>
+                        <p class="products__price">$129.99</p>
+                        <div class="products__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <button class="products__add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="products__item" data-category="interior">
+                    <div class="products__image">
+                        <img src="https://via.placeholder.com/300x300" alt="Fundas de Asiento Premium">
+                        <div class="products__overlay">
+                            <button class="products__quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <h3 class="products__title">Fundas de Asiento Premium</h3>
+                        <p class="products__price">$89.99</p>
+                        <div class="products__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="products__add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="products__item" data-category="electronica">
+                    <div class="products__image">
+                        <img src="https://via.placeholder.com/300x300" alt="Sistema de Audio Bluetooth">
+                        <div class="products__overlay">
+                            <button class="products__quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <h3 class="products__title">Sistema de Audio Bluetooth</h3>
+                        <p class="products__price">$199.99</p>
+                        <div class="products__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <button class="products__add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="products__item" data-category="exterior">
+                    <div class="products__image">
+                        <img src="https://via.placeholder.com/300x300" alt="Luces LED para Faros">
+                        <div class="products__overlay">
+                            <button class="products__quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <h3 class="products__title">Luces LED para Faros</h3>
+                        <p class="products__price">$79.99</p>
+                        <div class="products__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <button class="products__add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="products__item" data-category="interior">
+                    <div class="products__image">
+                        <img src="https://via.placeholder.com/300x300" alt="Organizador de Maletero">
+                        <div class="products__overlay">
+                            <button class="products__quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <h3 class="products__title">Organizador de Maletero</h3>
+                        <p class="products__price">$49.99</p>
+                        <div class="products__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="products__add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="products__item" data-category="electronica">
+                    <div class="products__image">
+                        <img src="https://via.placeholder.com/300x300" alt="Cámara de Retroceso HD">
+                        <div class="products__overlay">
+                            <button class="products__quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <h3 class="products__title">Cámara de Retroceso HD</h3>
+                        <p class="products__price">$149.99</p>
+                        <div class="products__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <button class="products__add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials__container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonials__slider">
+                <div class="testimonials__slide">
+                    <div class="testimonials__content">
+                        <div class="testimonials__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonials__text">"Excelente calidad en todos los productos que he comprado. El sistema de audio transformó completamente la experiencia de conducción en mi auto."</p>
+                        <div class="testimonials__author">
+                            <div class="testimonials__author-image">
+                                <img src="https://via.placeholder.com/50x50" alt="Carlos Rodríguez">
+                            </div>
+                            <div class="testimonials__author-info">
+                                <h4 class="testimonials__author-name">Carlos Rodríguez</h4>
+                                <p class="testimonials__author-car">Toyota Corolla 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__slide">
+                    <div class="testimonials__content">
+                        <div class="testimonials__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonials__text">"Las fundas de asiento que compré son increíbles, muy cómodas y de excelente calidad. El envío fue rápido y el servicio al cliente excepcional."</p>
+                        <div class="testimonials__author">
+                            <div class="testimonials__author-image">
+                                <img src="https://via.placeholder.com/50x50" alt="Ana Martínez">
+                            </div>
+                            <div class="testimonials__author-info">
+                                <h4 class="testimonials__author-name">Ana Martínez</h4>
+                                <p class="testimonials__author-car">Honda Civic 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__slide">
+                    <div class="testimonials__content">
+                        <div class="testimonials__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonials__text">"El spoiler deportivo que instalé en mi auto no solo mejoró su apariencia sino también su rendimiento aerodinámico. Totalmente recomendado."</p>
+                        <div class="testimonials__author">
+                            <div class="testimonials__author-image">
+                                <img src="https://via.placeholder.com/50x50" alt="Miguel Sánchez">
+                            </div>
+                            <div class="testimonials__author-info">
+                                <h4 class="testimonials__author-name">Miguel Sánchez</h4>
+                                <p class="testimonials__author-car">Mazda 3 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__controls">
+                <button class="testimonials__prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonials__next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter__container">
+            <h2 class="newsletter__title">Suscríbete a Nuestro Boletín</h2>
+            <p class="newsletter__text">Recibe las últimas novedades, ofertas exclusivas y consejos para tu vehículo.</p>
+            <form class="newsletter__form">
+                <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="newsletter__button">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="contact__container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <i class="contact__icon fas fa-map-marker-alt"></i>
+                        <div class="contact__info-content">
+                            <h3 class="contact__info-title">Dirección</h3>
+                            <p class="contact__info-text">Av. Principal 123, Ciudad</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <i class="contact__icon fas fa-phone-alt"></i>
+                        <div class="contact__info-content">
+                            <h3 class="contact__info-title">Teléfono</h3>
+                            <p class="contact__info-text">+123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <i class="contact__icon fas fa-envelope"></i>
+                        <div class="contact__info-content">
+                            <h3 class="contact__info-title">Email</h3>
+                            <p class="contact__info-text">info@ficiticio-automotriz.com</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <i class="contact__icon fas fa-clock"></i>
+                        <div class="contact__info-content">
+                            <h3 class="contact__info-title">Horario</h3>
+                            <p class="contact__info-text">Lun-Vie: 9am - 6pm<br>Sáb: 10am - 2pm</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form">
+                    <div class="contact__form-group">
+                        <input type="text" class="contact__input" placeholder="Nombre" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <input type="email" class="contact__input" placeholder="Email" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <input type="text" class="contact__input" placeholder="Asunto" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <textarea class="contact__textarea" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="contact__button">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Ficiticio Automotriz</h3>
+                    <p class="footer__text">Ofrecemos los mejores accesorios para tu vehículo con la mejor calidad y garantía.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Enlaces Rápidos</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#inicio" class="footer__link">Inicio</a></li>
+                        <li class="footer__link-item"><a href="#nosotros" class="footer__link">Sobre Nosotros</a></li>
+                        <li class="footer__link-item"><a href="#catalogo" class="footer__link">Catálogo</a></li>
+                        <li class="footer__link-item"><a href="#productos" class="footer__link">Productos</a></li>
+                        <li class="footer__link-item"><a href="#contacto" class="footer__link">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Categorías</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#" class="footer__link">Exterior</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Interior</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Electrónica</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Rendimiento</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Información</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#" class="footer__link">Términos y Condiciones</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Política de Privacidad</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Política de Envíos</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Política de Devoluciones</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Ficiticio Automotriz. Todos los derechos reservados.</p>
+                <div class="footer__payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <div class="modal__product">
+                <div class="modal__product-image">
+                    <img src="https://via.placeholder.com/400x400" alt="Producto" id="modalProductImage">
+                </div>
+                <div class="modal__product-info">
+                    <h3 class="modal__product-title" id="modalProductTitle">Nombre del Producto</h3>
+                    <div class="modal__product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(24 reseñas)</span>
+                    </div>
+                    <p class="modal__product-price" id="modalProductPrice">$0.00</p>
+                    <p class="modal__product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                    <div class="modal__product-quantity">
+                        <label for="quantity">Cantidad:</label>
+                        <div class="modal__quantity-control">
+                            <button class="modal__quantity-btn modal__quantity-decrease">-</button>
+                            <input type="number" id="quantity" class="modal__quantity-input" value="1" min="1">
+                            <button class="modal__quantity-btn modal__quantity-increase">+</button>
+                        </div>
+                    </div>
+                    <button class="modal__add-to-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
