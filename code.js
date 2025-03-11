@@ -196,3 +196,66 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Quick View Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('quickViewModal');
+    const modalClose = document.querySelector('.modal__close');
+    const productImages = document.querySelectorAll('.products__image');
+    const modalProductImage = document.getElementById('modalProductImage');
+    const modalProductTitle = document.getElementById('modalProductTitle');
+    const modalProductPrice = document.getElementById('modalProductPrice');
+
+    function openModal(productElement) {
+        const productInfo = productElement.closest('.products__item');
+        const productImage = productInfo.querySelector('.products__image img').src;
+        const productTitle = productInfo.querySelector('.products__title').textContent;
+        const productPrice = productInfo.querySelector('.products__price').textContent;
+
+        modalProductImage.src = productImage;
+        modalProductTitle.textContent = productTitle;
+        modalProductPrice.textContent = productPrice;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Event listener for quick view buttons
+    document.querySelectorAll('.products__quick-view').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal(this);
+        });
+    });
+
+    // Event listener for mobile image clicks
+    if (window.innerWidth <= 991) {
+        productImages.forEach(image => {
+            image.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal(this);
+            });
+        });
+    }
+
+    // Close modal when clicking the close button
+    modalClose.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});

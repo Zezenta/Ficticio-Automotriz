@@ -426,6 +426,23 @@ button {
     transition: var(--transition);
 }
 
+@media (max-width: 991px) {
+    .products__overlay {
+        opacity: 1;
+        background-color: transparent;
+    }
+    
+    .products__quick-view {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        font-size: 0;
+        padding: 0;
+    }
+}
+
 .products__item:hover .products__overlay {
     opacity: 1;
 }
