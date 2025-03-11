@@ -259,3 +259,65 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Animation Observer
+document.addEventListener('DOMContentLoaded', function() {
+    // Añadir clases de animación a los elementos
+    const hero = document.querySelector('.hero');
+    const features = document.querySelectorAll('.features__item');
+    const aboutImage = document.querySelector('.about__image');
+    const aboutContent = document.querySelectorAll('.about__subtitle, .about__description, .about__button');
+    const categoriesTitle = document.querySelector('.categories .section-title');
+    const contactWhatsapp = document.querySelector('.contact__whatsapp');
+    const contactSchedule = document.querySelector('.contact__schedule');
+    const testimonials = document.querySelector('.testimonials__content');
+    const testimonialsControls = document.querySelector('.testimonials__controls');
+    const footerColumns = document.querySelectorAll('.footer__column');
+    const footerBottom = document.querySelector('.footer__bottom');
+
+    // Añadir clases base de animación
+    hero.classList.add('animate-on-scroll');
+    features.forEach((item, index) => {
+        item.classList.add('animate-on-scroll--scale');
+        item.classList.add(`delay-${index + 1}`);
+    });
+    aboutImage.classList.add('animate-on-scroll--left');
+    aboutContent.forEach((item, index) => {
+        item.classList.add('animate-on-scroll--right');
+        item.classList.add(`delay-${index + 1}`);
+    });
+    categoriesTitle.classList.add('animate-on-scroll');
+    contactWhatsapp.classList.add('animate-on-scroll--bounce');
+    contactSchedule.classList.add('animate-on-scroll');
+    testimonials.classList.add('animate-on-scroll--scale');
+    testimonialsControls.classList.add('animate-on-scroll');
+    footerColumns.forEach((column, index) => {
+        column.classList.add('animate-on-scroll');
+        column.classList.add(`delay-${index + 1}`);
+    });
+    footerBottom.classList.add('animate-on-scroll');
+
+    // Función para verificar si un elemento está en el viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+            rect.bottom >= 0
+        );
+    }
+
+    // Función para manejar las animaciones
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll--left, .animate-on-scroll--right, .animate-on-scroll--scale, .animate-on-scroll--bounce');
+        
+        elements.forEach(element => {
+            if (isElementInViewport(element)) {
+                element.classList.add('animate--visible');
+            }
+        });
+    }
+
+    // Ejecutar al cargar la página y al hacer scroll
+    handleScrollAnimations();
+    window.addEventListener('scroll', handleScrollAnimations);
+});
