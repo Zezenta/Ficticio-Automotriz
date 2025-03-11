@@ -167,7 +167,7 @@ button {
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://zezenta.shop/placeholders/SHARE/ficticio-automotriz/about.jpg');
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -482,7 +482,7 @@ button {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 4rem 0;
+    padding: 4rem 0 1rem;
     background-color: var(--color-gray-light);
 }
 
@@ -615,24 +615,56 @@ button {
 
 /* Contact Section */
 .contact {
-    padding: 4rem 0;
+    padding: 1rem 0 4rem;
+    background-color: var(--color-gray-light);
 }
 
 .contact__content {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
 }
 
-.contact__info {
-    flex: 1;
+.contact__whatsapp {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.contact__info-item {
+.contact__whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    gap: 0.5rem;
+}
+
+.contact__whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+.contact__whatsapp-button i {
+    font-size: 1.5rem;
+}
+
+.contact__schedule {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 .contact__icon {
@@ -650,40 +682,11 @@ button {
     color: var(--color-gray-dark);
 }
 
-.contact__form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact__input,
-.contact__textarea {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border: 1px solid var(--color-gray);
-    border-radius: var(--border-radius);
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.contact__textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.contact__button {
-    align-self: flex-start;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 0.8rem 2rem;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.contact__button:hover {
-    background-color: var(--color-primary-dark);
+@media (max-width: 768px) {
+    .contact__whatsapp-button {
+        width: 90%;
+        max-width: 300px;
+    }
 }
 
 /* Footer */
@@ -759,9 +762,6 @@ button {
 }
 
 .footer__bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
@@ -769,13 +769,6 @@ button {
 
 .footer__copyright {
     color: rgba(255, 255, 255, 0.7);
-}
-
-.footer__payment {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.5rem;
 }
 
 /* Back to Top Button */
@@ -893,55 +886,28 @@ button {
     color: var(--color-gray-dark);
 }
 
-.modal__product-quantity {
-    display: flex;
+.modal__whatsapp-button {
+    display: inline-flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.modal__quantity-control {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--color-gray);
-    border-radius: var(--border-radius);
-}
-
-.modal__quantity-btn {
-    width: 36px;
-    height: 36px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: var(--color-gray-light);
-    transition: var(--transition);
-}
-
-.modal__quantity-btn:hover {
-    background-color: var(--color-gray);
-}
-
-.modal__quantity-input {
-    width: 50px;
-    height: 36px;
-    text-align: center;
-    border: none;
-    border-left: 1px solid var(--color-gray);
-    border-right: 1px solid var(--color-gray);
-}
-
-.modal__add-to-cart {
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: #25D366;
     color: var(--color-white);
-    padding: 0.8rem 0;
+    padding: 1rem;
     border-radius: var(--border-radius);
+    font-size: 1.1rem;
     font-weight: 600;
     transition: var(--transition);
+    gap: 0.5rem;
 }
 
-.modal__add-to-cart:hover {
-    background-color: var(--color-primary-dark);
+.modal__whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+.modal__whatsapp-button i {
+    font-size: 1.3rem;
 }
 
 /* Media Queries */
