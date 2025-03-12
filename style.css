@@ -298,13 +298,6 @@ button {
     flex: 1;
 }
 
-.about__subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-secondary);
-    animation: none;
-}
-
 .about__description {
     margin-bottom: 1rem;
     color: var(--color-gray-dark);
