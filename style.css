@@ -812,17 +812,6 @@ button {
     transform: translateX(5px);
 }
 
-.footer__bottom {
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    animation: none;
-}
-
-.footer__copyright {
-    color: rgba(255, 255, 255, 0.7);
-}
-
 /* Back to Top Button */
 .back-to-top {
     position: fixed;

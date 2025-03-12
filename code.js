@@ -273,7 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const testimonials = document.querySelector('.testimonials__content');
     const testimonialsControls = document.querySelector('.testimonials__controls');
     const footerColumns = document.querySelectorAll('.footer__column');
-    const footerBottom = document.querySelector('.footer__bottom');
 
     // Añadir clases base de animación
     hero.classList.add('animate-on-scroll');
@@ -295,7 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
         column.classList.add('animate-on-scroll');
         column.classList.add(`delay-${index + 1}`);
     });
-    footerBottom.classList.add('animate-on-scroll');
 
     // Función para verificar si un elemento está en el viewport
     function isElementInViewport(el) {
